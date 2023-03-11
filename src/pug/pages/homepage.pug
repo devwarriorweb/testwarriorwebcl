@@ -8,21 +8,56 @@
 //- ::: Include Head & Body ::: -//
 include ../includes/head
 
+//- ::Slide1 home ::
+<section class="slide fade-6 kenBurns animate selected" data-title="slide1-home" data-name="slide1">
+    <div class="content">
+        <div class="container">
+            <div class="wrap left">
 
-<section class="slide fade-4" data-title="Homepage" data-name="homepage">
+                <div class="fix-6-12 toLeft ">
+                    <div class="done"><p class="larger light margin-bottom-1 opacity-8">Workshop</p></div>
+                    <h1 class="large margin-bottom-2 done">TESTING<span class="typed"></span></h1>
+                    <p class="larger light margin-bottom-4 done"><span class="opacity-8">Built your dreams with code</span></p>
+                    <a data-title="slide2-form" class="button blue rounded fromCenter wideForPhablet cropLeft done">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background" style="background-image:url(#{base}/assets/img/home/backgrounds/img-44.jpg)"></div>
+
+</section>
+
+//- :: Slide2 form ::
+
+<section class="slide fade-4 fadeGradient-dark-7" data-title="slide2-form" data-name="slide2">
     <div class="content">
         <div class="container">
             <div class="wrap">
 
 
-                <ul class="flex">
+                <ul class="flex ">
+
+                    <li class="fix-4-12">
+
+
+                        <div class="pad padding-top-3 shadow selected">
+
+
+                            <h6 class="largest roboto weight-9 opacity-8 padding-top-2" style="line-height: .9em" >Complete the form data</h6>
+                            <h6 class="smaller weight-6 margin-bottom-1 opacity-8" >...and let's begin!</h6>
+
+                            +form_contact()
+                        </div>
+                    </li>
 
                     <li class="fix-8-12 margin-top-desktop-20 margin-top-10 margin-bottom-6">
 
 
-                        <h3 class="smaller roboto weight-9 margin-top-desktop-2 text-red" style="line-height: .9em;"  >Conoce Nuestro Mundos</h3>
 
-                        <h2 class="h1 largest roboto weight-9 margin-top-1" style="line-height: .9em;" >¿A Que Esperas?</h2>
+                        <h2 class="h1 largest roboto weight-9 margin-top-1" style="line-height: .9em;" >You have a project in your mind?</h2>
+                        <h3 class="smaller roboto weight-9 margin-top-desktop-2 text-red" style="line-height: .9em;"  >get started</h3>
+
 
                         <div style="margin: 0 80px">
 
@@ -34,24 +69,13 @@ include ../includes/head
                         </div>
 
 
-                        <a href="https://api.whatsapp.com/send?phone=#{ whatsapp_number }&text=¡Hola%20🇨🇱!,%20Tengo%20algunas%20dudas%20¿me%20podrían%20asesorar?%20😊" class="button small green rounded crop margin-bottom-1 margin-right-1" ><span class='material-icons relative md-24' style="left: -2px; top: 1px">whatsapp</span>Contactame por WhatsApp</a>
+                        <a href="https://api.whatsapp.com/send?phone=#{ whatsapp_number }&text=¡Hi%20🇨🇱!,%20Tengo%20algo%20en%20mente%20¿me%20podrían%20asesorar?%20😊" class="button small green rounded crop margin-bottom-1 margin-right-1" ><span class='material-icons relative md-24' style="left: -2px; top: 1px">whatsapp</span>let's talk!</a>
 
 
                     </li>
 
 
-                    <li class="fix-4-12">
 
-
-                        <div class="pad padding-top-3 shadow selected">
-
-
-                            <h6 class="largest roboto weight-9 opacity-8 padding-top-2" style="line-height: .9em" >LA VIDA ES SOLO UNA</h6>
-                            <h6 class="smaller weight-6 margin-bottom-1 opacity-8" >Ven a disfrutarla con nosotros ...</h6>
-
-                            +form_contact()
-                        </div>
-                    </li>
 
                 </ul>
 
@@ -62,15 +86,76 @@ include ../includes/head
 
 
 
-    <div class="background youtube" style="background-image:url(https://img.youtube.com/vi/Sud8Ux71RFc/maxresdefault.jpg);" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=T3OfWBxWRhE', containment:'self', startAt: 1, stopAt: 75, showControls:false, autoPlay:true, loop:true, mute:true, opacity:1, quality:'highres', stopMovieOnBlur:false, remember_last_time: true}"></div>
+    <div class="background youtube" style="background-image:url(https://img.youtube.com/vi/Sud8Ux71RFc/maxresdefault.jpg);" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=c_V1iD6F1kk', containment:'self', startAt: 1, stopAt: 75, showControls:false, autoPlay:true, loop:true, mute:true, opacity:1, quality:'highres', stopMovieOnBlur:false, remember_last_time: true}"></div>
 
 
 
 </section>
 
+//- ::Slide3  alpinejs ::
+<section class="slide fade-6 kenBurns animate selected" data-title="slide3-alpinejs" data-name="slide3">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+                //::
+                <h2 class="h1 largest roboto weight-9 margin-top-1" style="line-height: .9em;" >Welcome to  my store</h2><br>
+                <div x-data="tienda()" x-init="fetch(url).then(response => response.json()).then( json => { products = json; console.log(products) })">
+                    <!--<div class="product-list">
+
+                        <template x-for="product in products">
+
+                            <div class="product">
+
+                                <img x-bind:src="product.image">
+                                <h4 x-text="product.title"></h4>
+
+
+                            </div>
+
+
+
+                        </template>
+
+                    </div> -->
+
+                    //-
+
+                    <div class="product-list">
+
+                        <template x-for="product in products">
+
+                            <div class="product">
+
+                                <img x-bind:src="product.image">
+                                <h4 x-text="product.title"></h4>
+
+                                <p class="title" x-text="product.title"></p>
+                                <p class="category" x-text="product.category"></p>
+
+                            </div>
+
+                            <li x-text="product.title"></li>
+
+                        </template>
+
+                    </div>
+                    //-
+                </div>
+                //::
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="background" style="background-image:url(#{base}/assets/img/home/backgrounds/img-76.jpg)"></div>
+
+</section>
+
+
 
 //- :::  Section of Plugins in this Page ::: -//
 +background_youtube()
+
 
 
 

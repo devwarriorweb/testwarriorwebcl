@@ -28,7 +28,7 @@ include ../plugins/slides++
     <meta name="apple-mobile-web-app-capable" content="yes"/>
 
     //- Title
-    <title>Proyecto Base</title>
+    <title>TEST WARRIORWEB</title>
 
     //- CSS Style
     <link rel="stylesheet" href="#{base}assets/css/styles.css?#{fingerprint}">
@@ -36,11 +36,22 @@ include ../plugins/slides++
     //- Jquery 3.5.1
     <script type="text/javascript" src="#{base}assets/js/jquery.js" ></script>
 
+    //- jQuery 3.6.0
+    //-<script  type="text/javascript" src="#{dir}assets/js/jquery360.js"></script>
+
     //- Slides 5.2.1
     <script type="text/javascript" src="#{base}assets/js/slides.js" defer></script>
 
+    //-Slide 6
+    //-<script type="text/javascript" src="#{dir}assets/js/slides6.js" ></script>
+
+
     //- Plugins 5.2.1
     <script type="text/javascript" src="#{base}assets/js/plugins.js" defer></script>
+
+    //-Plugins 6
+    //- <script type="text/javascript" src="#{dir}assets/js/plugins6.js" ></script>
+
 
     //- SweetAlert2 11.0.0
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
@@ -53,16 +64,22 @@ include ../plugins/slides++
 
     //- Script Index JS Own
     <script  src="#{base}assets/js/script.js" defer></script>
+    //- Script Index JS Own
+    <script  src="#{base}assets/js/script2.js" ></script>
+
+    //-typed js
+    <script src="https://cdn.rawgit.com/mattboldt/typed.js/548c6ade/dist/typed.min.js"></script>
+
+
 
 
 
 </head>
 
-<body class="slides scroll">
+<body class="slides scroll smoothScroll animateOnEvent">
 
-
-include navbar
-include sidebar
+include ../includes/navbar
+include ../includes/sidebar
 
 
 

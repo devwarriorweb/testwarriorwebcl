@@ -1,6 +1,10 @@
 console.log("Script Connected");
 
 
+
+
+
+
 // ::: Capturamos las parametros GET del URL :::
 const valores = window.location.search;
 const urlParams = new URLSearchParams(valores);
@@ -25,4 +29,8 @@ console.log(label_id)
 document.getElementById("labels_ids").value = `${label_program}${label_id}`;
 
 console.log("hi world");
+//::: función api alpine js
+
+
+
 
